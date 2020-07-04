@@ -1,0 +1,30 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 85px 150px;
+}
+
+section div {
+    width: 80%;
+    margin-bottom: 80px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+th {
+    padding: 20px;
+}
+
+td {
+    padding: 20px;
+}
+
+a {
+    color: #D4D4D4;
+}

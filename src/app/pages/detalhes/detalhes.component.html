@@ -1,0 +1,17 @@
+<section>
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+      <h1>{{ disciplina.sigla }}</h1>
+      <p><b>Disciplina: </b> {{ disciplina.nome }}</p>
+      <p><b>Hora: </b> {{ disciplina.hora }}</p>
+      <p><b>Frequência: </b> {{ disciplina.frequencia }}</p>
+      <p><b>Nota: </b> {{ disciplina.notaFinal }}</p>
+
+      <input type="number" min="0" max="10" class="form-control number-input" placeholder="Atualizar nota" formControlName="nota" #refNota/>
+
+      <button *ngIf="refNota.value" type="submit" class="btnEnviar">Atualizar</button>
+
+    </form>
+  </section>
+  
+  

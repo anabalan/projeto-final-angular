@@ -1,0 +1,31 @@
+<section>
+  <div *ngFor="let disciplina of this.historico">
+      <h3>{{ disciplina.semestre }}</h3>
+    
+      <table>
+        <thead>
+          <tr>
+            <th>Sigla</th>
+            <th>Matéria</th>
+            <th>Hora</th>
+            <th>Dia</th>
+            <th>frequencia</th>
+            <th>Nota</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let descricao of disciplina.disciplinas" [ngStyle]="{'background-color': descricao.status == 'aprovado' ? '#282B30' : '#FE5D93'}">
+            <a routerLink="/detalhes/{{ descricao.sigla }}" class="link"><th scope="row">{{ descricao.sigla }}</th></a>
+            <td>{{ descricao.nome }}</td>
+            <td>{{ descricao.hora }}</td>
+            <td>{{ descricao.data }}</td>
+            <td>{{ descricao.frequencia }} %</td>
+            <td>{{ descricao.notaFinal }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+
+
+  
